@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Template</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #container{
+            background-color: white;
+            display: grid;
+            max-width: 1024px;
+            height: 100%;
+            margin: auto;
+            padding: 20px;
+            border: 0.5px dotted black;
+        }
+
+        #grid1{
+            background-color: red;
+            height: 70px;
+            margin: 20px;
+        }
+
+        #grid2{
+            display: grid;
+            grid-template-columns: 25% 75%;
+            /* margin: 20px; */
+        }
+
+        #grid2 > div:nth-child(1){
+            background-color: rgb(48, 184, 48);
+            margin: 30px;
+            height: 600px;
+        }
+
+        #grid2 > div:nth-child(2){
+            background-color: #009688;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="grid1">
+            <div></div>
+        </div>
+        <div id="grid2">
+            <div></div>
+            <div></div>
+        </div>
+        
+    </div>
+</body>
+</html>

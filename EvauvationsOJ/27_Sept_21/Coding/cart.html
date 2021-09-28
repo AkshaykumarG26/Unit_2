@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanishque Jewellery Shop</title>
+    <style>
+         #products{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            margin: 5% 5% 5% 5%;
+            grid-gap: 5%;
+        }
+
+
+        img{
+            width: 200px;
+            margin-left: auto;
+            border-radius: 5px;
+        }
+
+        div > div{
+            padding: 20%;
+        }
+    </style>
+</head>
+<body>
+    <label for="">Apply Coupen Code</label>
+    <input type="text" name="" id="masia_30" placeholder="Apply Coupen Code Here">
+    <br><br>
+    <button onclick="apply()" id="masai_30_btn">Get Discount</button>
+    <br><br>
+        <!-- <label for="">Total Price</label> -->
+        <h3 id="totalPrice">Total price</h3>
+
+        <a href="checkout.html"><button>Check Out</button></a>
+    <div id="products"></div>
+</body>
+
+<script src="cart.js"></script>
+</html>

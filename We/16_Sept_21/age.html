@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Filter</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <p id="output"></p>
+        <div>
+            <label for="">Age</label>
+            <input type="number" name="" id="age" />
+        </div>
+        <br>
+        <button onclick="checkAge()">Click</button>
+    </div>
+    
+
+    <script>
+        function checkAge(){
+            var ageEle = document.getElementById("age");
+            var age = Number(ageEle.value);
+            // console.log(age)
+            var outEle = document.getElementById("output")
+            if (age > 18){
+                outEle.textContent = "You can drive in India!"
+            }else if (age == 18){
+                outEle.textContent = "You are just old enough to drive in India!"
+            }else{
+                outEle.textContent = 'You can not drive in India!'
+            }
+        }
+    </script>
+</body>
+</html>

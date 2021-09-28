@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout B</title>
+    <style>
+        .container1{
+            display: grid;
+            width: 1000px;
+            grid-template-columns: 33% 33% 33%;
+            margin:auto;
+            /* border: 1px solid black; */
+            padding: 1%;
+        }
+
+        .container > div{
+            padding: 10px;
+            /* margin: auto; */
+            height: auto;
+            width: 341px;
+            /* border: 1px solid black; */
+        }
+
+        img{
+            width: 300px;
+        }
+
+        .read{
+            color: blue;
+            font-size: 20px;
+            /* padding: 2px; */
+        }
+
+        strong{
+            font-size: 18px;
+            /* margin: 10px; */
+            /* padding: 7px; */
+            margin-top: 5px;
+        }
+        
+
+
+        .container2 {
+            margin-top: 100px;
+            width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 100%;
+            /* border: 1px solid black; */
+            margin-left: 300px;
+        }
+
+        .row1{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            /* border: 1px solid black; */
+            padding: 40px;
+            padding-left: 10px;
+            font-size: 20px;
+            /* margin: auto; */
+
+        }
+
+        .row2{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            padding: 10px;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+
+        .row > div{
+            text-align: left;
+        }
+
+        .str{
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .explore{
+            margin-left: 320px;
+            font-weight: 50;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div>
+            <div><img src="https://images.indianexpress.com/2020/09/train.jpg" alt="">
+            <div>Eurostar</div>
+            <div><strong>A better digital experience for millions of travellers</strong></div>
+            <div class="read">Read case study -></div>
+        </div>
+        </div>
+        <div>
+            <div><img src="https://images.indianexpress.com/2020/09/train.jpg" alt="">
+            <div>Ahm</div>
+            <div><strong>Introducing a powerful backend for Austrelia's second largest health insurer</strong></div>
+            <div class="read">Read case study -></div>
+        </div>
+        </div>
+        <div>
+            <div><img src="https://images.indianexpress.com/2020/09/train.jpg" alt="">
+            <div>XXL</div>
+            <div><strong>Improving time to market for the largest Nordic sports retailer</strong></div>
+            <div class="read">Read case study -></div>
+        </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <div class="explore">Explore Solutions</div>
+    <div class="container2">
+        <div class="row1">
+            <div class="roww">
+                <div><strong class="str">Handless CMS</strong></div>
+                <div>Build cutting edge experiences without restrictions</div>
+            </div>
+            <div class="roww">
+                <div><strong class="str">Landing Page Builder</strong></div>
+                <div>Empower your markters, Unchain your engineers</div>
+            </div>
+            <div class="roww">
+                <div><strong class="str">Audience Segmentation</strong></div>
+                <div>Personalize content at scale</div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="roww">
+                <div><strong class="str">E-commerce</strong></div>
+                <div>Leverage handless commerce technology to sell anywhere</div>
+            </div>
+            <div class="roww">
+                <div><strong class="str">Editorial workflow</strong></div>
+                <div>Enhance the editorial workflow</div>
+            </div>
+            <div class="roww">
+                <div><strong class="str">Multi-dataset Architecture</strong></div>
+                <div>Fuel your emtire ecosystem with onecentralized content hub</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

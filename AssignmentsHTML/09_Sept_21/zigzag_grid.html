@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zig-Zag Grid</title>
+    <style>
+        .container{
+            width: 1024px;
+            height: 600px;
+            margin: auto;
+            margin-top: 100px;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-gap: 45px;
+            grid-template: 'a k k c'
+                            's s e f'
+                            'g h y y';
+        }
+
+        .container > div:nth-child(1){
+            background-color: #00796B;
+            grid-area: a;
+        }
+
+        .container > div:nth-child(2){
+            background-color: #00796B;
+            grid-area: k;
+        }
+
+        .container > div:nth-child(3){
+            background-color: #00796B;
+            grid-area: c;
+        }
+
+        .container > div:nth-child(4){
+            background-color: #00796B;
+            grid-area: s;
+        }
+
+        .container > div:nth-child(5){
+            background-color: #00796B;
+            grid-area: e;
+        }
+
+        .container > div:nth-child(6){
+            background-color: #00796B;
+            grid-area: f;
+        }
+
+        .container > div:nth-child(7){
+            background-color: #00796B;
+            grid-area: g;
+        }
+
+        .container > div:nth-child(8){
+            background-color: #00796B;
+            grid-area: h;
+        }
+
+        .container > div:nth-child(9){
+            background-color: #00796B;
+            grid-area: y;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        div > div{
+            padding: 10px;
+            background-color: yellow;
+            margin: 5px;
+            /* margin: auto; */
+            flex-basis: 22%;
+        }
+
+        div > div:nth-child(6){
+            flex-basis: 48%;
+            background-color: red;
+            height: 100px;
+        }
+
+        div > div:nth-child(7){
+            flex-basis: 48%;
+            background-color: red;
+        }
+
+        #container1{
+            display: flex;
+            /* max-width: 1024px; */
+            margin: 5px;
+            /* margin: auto; */
+            border: 1px solid black;
+            flex-wrap: wrap;
+        }
+
+        #container2{
+            display: flex;
+            /* max-width: 1024px; */
+            /* margin: 5px; */
+            /* margin: auto; */
+            border: 1px solid black;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <div>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo!</div>
+        <div>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo!</div>
+        <div>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo!</div>
+        <div>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo!</div>
+        <div>5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo!</div>
+        <div>6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo!</div>
+        <div>7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo!</div>
+        <div>8 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo!</div>
+        <!-- <div>9</div> -->
+    </div>
+    
+    <div id="container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <!-- <div>9</div> -->
+    </div>
+</body>
+</html>

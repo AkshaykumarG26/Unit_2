@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Continent</title>
+    <style>
+        div{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<div style="margin: auto; width: 50%; margin-top: 150px; padding-left: 20%;">
+    <label for="">Countries</label>
+        <select name="" id="continent_select">
+            <option value="India">India</option>
+            <option value="USA">United States of America</option>
+            <option value="China">China</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Austrelia">Austrelia</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="South_Africa">South Africa</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Canada">Canada</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Sweeden">Sweeden</option>
+        </select>
+        <button onclick="findContinent('country')">Find Continent</button>
+</div>
+
+<script>
+    function findContinent(Country){
+        var countryEle = document.getElementById('continent_select')
+        var Country = countryEle.value
+        // console.log(Country)
+
+    switch(Country){
+    case "India":
+        alert  ("The continent is Asia");
+        break;
+    case "China":
+        alert  ("The continent is Asia");
+        break;
+    case "Nepal":
+        alert  ("The continent is Asia");
+        break;
+    case "France":
+        alert  ("The continent is Europe");
+        break;
+    case "Germany":
+        alert  ("The continent is Europe");
+        break;
+    case "Sweden":
+        alert  ("The continent is Europe");
+        break;
+    case "Canada":
+        alert ("The continent is North America");
+        break;
+    case "USA":
+        alert ("The continent is North America");
+        break;
+    case "Mexico":
+        alert ("The continent is North America");
+        break;
+    case "Argentina":
+        alert ("The continent is South America");
+        break;
+    case "Brazil":
+        alert ("The continent is South America");
+        break;
+    case "South Africa":
+        alert ("The continent is Africa");
+        break;
+    case "Nigeria":
+        alert ("The continent is Africa");
+        break;
+    case "Austrelia":
+        alert ("The continent is Oceania");
+        break;
+}
+    }
+</script>
+</body>
+</html>

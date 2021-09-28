@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #products{
+            margin: 5% 5% 5% 5%;
+            /* height: 600px; */
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            justify-content: center;
+        }
+
+        div > div {
+          /* border: 1px solid black; */
+          padding: 20PX;
+          /* display: block; */
+        }
+
+        img{
+            width: 80px;
+            height: 150px;
+            /* content: inherit; */
+            margin-left: auto;
+            border-radius: 10px;
+            /* margin-right: auto; */
+        }
+
+        .gotocartbtn{
+          width: 150px;
+          margin-left: 40%;
+          padding: 15px;
+
+        }
+
+        .gotocartbtn:hover{
+          background-color: rgb(109, 63, 63);
+          color: white;
+        }
+
+        div > button{
+          padding: 10px;
+        }
+
+        div > button:hover{
+          background-color: rgb(53, 23, 23);
+          color: white;
+
+        }
+
+        body{
+          background-color: rgb(192, 189, 189);
+        }
+
+        p{
+          font-size: 17px;
+          font-family: fantasy;
+        }
+
+        .sort{
+          width: 150px;
+          margin-left: 40%;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          /* padding: 15px; */
+
+        }
+
+
+       
+    </style>
+</head>
+<body>
+  <button class="sort" onclick="lowTohigh()">Sort Low to High</button>
+  <a href="cart.html"><button class="gotocartbtn">Go To Cart</button></a>
+    <button class="sort" onclick="highTolow()">Sort High to Low</button>
+    <!-- <h1>Local Storage</h1> -->
+    <div id="products"></div>
+    
+
+    <script>
+
+let data = [
+    {
+      name: "Samsung A21",
+      price: "12934",
+      img: "https://m.media-amazon.com/images/I/71-Su4Wr0HL._AC_UY218_.jpg",
+    },
+    {
+      name: "Samsung M12",
+      price: "13499",
+      img: "https://m.media-amazon.com/images/I/71yYaNztZ0L._AC_UY218_.jpg",
+    },
+    {
+      name: "Samsung M21",
+      price: "14999",
+      img: "https://m.media-amazon.com/images/I/811lrGbXwIL._AC_UY218_.jpg",
+    },
+    {
+      name: "Samsung M32",
+      price: "16999",
+      img: "https://m.media-amazon.com/images/I/71Q3iSQAwAS._AC_UY218_.jpg",
+    },
+    {
+      name: "realme C12",
+      price: "7999",
+      img: "https://m.media-amazon.com/images/I/618UBhFmaQS._AC_UY218_.jpg",
+    },
+    {
+      name: "realme C11",
+      price: "8999",
+      img: "https://m.media-amazon.com/images/I/31RDanklxiL._AC_UY218_.jpg",
+    },
+    {
+      name: "realme C21Y",
+      price: "10879",
+      img: "https://m.media-amazon.com/images/I/41sY1XXz-NL._AC_UY218_.jpg",
+    },
+    {
+      name: "realme XT",
+      price: "17823",
+      img: "https://m.media-amazon.com/images/I/21w+FeRuYfL._AC_UY218_.jpg",
+    },
+  ];
+
+//1.  run foreach loop on product data and print the individual data products name 
+//2.  append this data on DOM
+//2.1 Create Element
+
+    let parent = document.getElementById("products");
+
+    function showProducts(d){
+
+      parent.innerHTML = null;
+
+        d.forEach(function(product){
+            // console.log(product.name);
+            // console.log(product.price)
+            
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            
+            img.src = product.img
+            
+            let product_name = document.createElement("p");
+            product_name.textContent = product.name;
+            
+            let product_price = document.createElement("p");
+            product_price.textContent = product.price;
+
+            let addToCart_btn = document.createElement("button");
+            addToCart_btn.innerText = "Add to cart";
+
+            addToCart_btn.onclick = function(){
+                addtoCart(product);
+            }
+
+            
+            div.append(img, product_name, product_price, addToCart_btn);
+            parent.append(div);
+    });
+}
+    showProducts(data);
+    // check if cart exist in our local storage
+    
+    // let arr = [{name: 'aks'},{name: 'dkd'}]
+
+    if(localStorage.getItem("cart") === null){
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+
+    function addtoCart(p){
+      let producstCart = JSON.parse(localStorage.getItem("cart"));
+      producstCart.push(p);
+      localStorage.setItem("cart", JSON.stringify(producstCart));
+      console.log(producstCart)
+    }
+
+    // if (localStorage.getItem("cart") === )
+
+    function lowTohigh(){
+
+      let arr = data.sort(function(a,b){
+        // console.log(a,b)
+        return a.price - b.price;
+
+      });
+      showProducts(arr)
+    }
+
+    function highTolow(){
+
+      let arr = data.sort(function(a,b){
+        // console.log(a,b)
+        return b.price - a.price;
+
+      });
+      showProducts(arr)
+
+    }
+
+    </script>
+</body>
+
+</html>

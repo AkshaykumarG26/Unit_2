@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            margin-top: 100px;
+            padding: 50px;
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            /* height: 100px; */
+            /* border: 1px solid black; */
+        }
+
+        .first{
+            width: 300px;
+            margin: auto;
+            display: flex;
+            /* background-color: ; */
+            border-radius: 10px;
+            /* border: 1px solid black; */
+        }
+
+        .color1{
+            background-color: rgb(199, 199, 11);
+            color: white;
+        }
+
+        .color2{
+            background-color: blue;
+            color: white;
+        }
+
+        .color3{
+            background-color: aquamarine;
+            color: white;
+        }
+        
+
+        .other{
+            margin-top: 25px;
+            margin-left: 10px;
+            /* display: flex; */
+        }
+
+        .other :nth-child(1){
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .other :nth-child(2){
+            font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 60px;
+            /* margin-top: 30px; */
+            padding: 10px;
+            /* border: 1px solid black; */
+        }
+
+        .container2{
+            /* border: 1px solid black; */
+            padding: 10px;
+            width: 900px;
+            margin: auto;
+            display: flex;
+        }
+
+        .container2 > div{
+            display: flex;
+            margin: auto;
+            padding: 20px;
+            font-size: 25px;
+            font-weight: 300;
+            background-color: aqua;
+            color: white;
+            border-radius: 5px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .container2 > div:hover{
+            background-color: black;
+        }
+
+        .container3{
+            /* margin-top: 100px; */
+            padding: 50px;
+            display: flex;
+            width: 1500px;
+            margin: auto;
+            /* border: 1px solid black; */
+            flex-direction: row;
+        }
+
+        .container3 > div{
+            margin: auto;
+            background-color: rgb(236, 236, 236);
+            /* border: 1px solid black; */
+            padding: 40px;
+        }
+
+       .container3 div > img{
+            width: 400px;
+            margin: auto;
+        }
+
+        p{
+            display: flex;
+            /* text-align: left; */
+            flex-wrap: wrap;
+        }
+
+        button{
+            /* margin: auto; */
+            display: flex;
+            padding: 20px;
+            width: 170px;
+            color: rgb(63, 202, 202);
+            border: 1px solid rgb(63, 202, 202);
+            /* text-align: center; */
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="first color1">
+            <div>
+                <div><img src="logo.png" alt=""></div>
+            </div>
+            <div class="benifits other">
+                <div>Scholarship</div>
+                <div>Available</div>
+            </div>
+        </div>
+        <div class="first color2">
+            <div>
+                <div><img src="logo.png" alt=""></div>
+            </div>
+            <div class="benifits other">
+                <div>Scholarship</div>
+                <div>Available</div>
+            </div>
+        </div>
+        <div class="first color3">
+            <div>
+                <div><img src="logo.png" alt=""></div>
+            </div>
+            <div class="benifits other">
+                <div>Scholarship</div>
+                <div>Available</div>
+            </div>
+        </div>
+    </div>
+    <!-- <br> -->
+    <h1>Popular Program</h1>
+
+    <div class="container2">
+        <div>Graduate</div>
+        <div>Postgraduate</div>
+        <div>PHD Scholarship</div>
+        <div>Training</div>
+    </div>
+    <div></div>
+    <div class="container3">
+        <div class="imageBox1">
+            <div class="image1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHxcBUKL6mSc_VLJ9IeHiDRsghD1xTZ-MgdQ&usqp=CAU" alt=""></div>
+            <div><p>Agriculture</p></div>
+            <div><h3>Chemical Engineering</h3></div>
+            <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto distinctio libero omnis fugit dolorem possimus!</p></div>
+            <div><button>APPLY NOW</button></div>
+
+        </div>
+        <div class="imageBox2">
+            <div class="image2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0FCHvfcE2YgnWu9x8bAnLsbNwIeJVKDDBwA&usqp=CAU" alt=""></div>
+            <div><p>Agriculture</p></div>
+            <div><h3>Mechanical Engineering</h3></div>
+            <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto distinctio libero omnis fugit dolorem possimus!</p></div>
+            <div><button>APPLY NOW</button></div>
+        </div>
+        <div class="imageBox3">
+            <div class="image3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHxcBUKL6mSc_VLJ9IeHiDRsghD1xTZ-MgdQ&usqp=CAU" alt=""></div>
+            <div><p>Agriculture</p></div>
+            <div><h3>Bio Engineering</h3></div>
+            <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto distinctio libero omnis fugit dolorem possimus!</p></div>
+            <div><button>APPLY NOW</button></div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+

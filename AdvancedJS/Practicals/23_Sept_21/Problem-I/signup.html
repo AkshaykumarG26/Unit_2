@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        .forms{
+            margin: auto;
+            width: 200px;
+            margin-top: 30px;
+            /* border: 1px solid black; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="forms">
+        <a href="signin.html"><button>Sign In Page</button></a>
+        <br>
+        <br><br>
+        <h1>Sign Up</h1>
+        <div class="forms">
+            <form onsubmit = "signUp(event)" action="" id="myform">
+                <label for="">Name</label>
+                <br><br>
+                <input type="text" name="" id="name" placeholder="Enter Name" />
+                <br><br>
+                <label for="">Email</label>
+                <br><br>
+                <input type="text" name="" id="email" placeholder="Enter mail" />
+                <br><br>
+                <label for="">Password</label>
+                <br><br>
+                <input type="password" name="" id="password" placeholder="Enter Password">
+                <br><br>
+                <input type="submit" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+    
+<script>
+    function signUp(e){
+        e.preventDefault()
+        let myform = document.getElementById("myform");
+        // console.log(myform)
+        let name = myform.name.value;
+        let email = myform.email.value;
+        let password = myform.password.value;
+        // console.log(name, email, password)
+
+        if (localStorage.getItem("users") === null){
+            localStorage.setItem("users", JSON.stringify([]))
+        }
+
+        // 0. grab and prepare user data
+        let user = {
+            name,
+            email,
+            password
+        }
+        // console.log(user)
+
+        //1. get array from local stprage
+        let arr = JSON.parse(localStorage.getItem("users"))
+        // 2. push new user to arr
+        arr.push(user) // added new user
+
+        localStorage.setItem("users", JSON.stringify(arr))
+
+    }
+</script>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COmmerce-I</title>
+    <style>
+        #products{
+            margin: 5% 5% 5% 5%;
+            /* height: 600px; */
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            justify-content: center;
+        }
+
+        #products > div{
+          border: 1px solid black;
+        }
+
+        img{
+            width: 80%;
+        }
+    </style>
+    <style>
+        .form{
+            margin: auto;
+            width: 200px;
+            margin-top: 30px;
+            /* border: 1px solid black; */
+        }
+
+        button{
+            margin-left: 25%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="forms" >
+            <form action="" id = "addProducts" onsubmit="addtocart(event)">
+                <label for="">Product Name:</label>
+                <br><br>
+                <input type="text" name="" id="pName" placeholder="Enter product name">
+                <br><br>
+                <label for="">Product Price:</label>
+                <br><br>
+                <input type="number" name="" id="pPrice" placeholder="Enter product price">
+                <br><br>
+                <label for="">Image URL:</label>
+                <br><br>
+                <input type="text" name="" id="pImg" placeholder="Enter product img link">
+                <br><br>
+                <input type="submit" name="" id="">
+            </form>
+        </div>
+    </div>
+    <div id="products"></div>
+
+</body>
+</html>
+    
+<script>
+    
+    function addtocart(e){
+        e.preventDefault();
+
+        let myproducts = document.getElementById("addProducts");
+        let productName = myproducts.pName.value;
+        let productPrice = myproducts.pPrice.value;
+        let productImage = myproducts.pImg.value;
+
+        if (!productName || !productPrice || !productImage){
+            alert("Enter Details")
+        }else{
+
+            if (localStorage.getItem("products") === null){
+            localStorage.setItem("products", JSON.stringify([]))
+        }
+
+            let products = {
+                productName,
+                productPrice,
+                productImage,
+            };
+        
+
+
+        
+        arr = JSON.parse(localStorage.getItem("products"));
+        arr.push(products)
+        localStorage.setItem("products", JSON.stringify(arr))
+        console.log(arr)
+    
+        let parent = document.getElementById("products");
+    
+
+    function showProducts(){
+
+    parent.innerHTML = null;
+
+        arr.forEach(function(product){
+            // console.log(product.name);
+            // console.log(product.price)
+            
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            
+            img.src = product.productImage
+            
+            let product_name = document.createElement("p");
+            product_name.textContent = product.productName;
+            
+            let product_price = document.createElement("p");
+            product_price.textContent = product.productPrice;
+
+            let addToCart_btn = document.createElement("button");
+            addToCart_btn.innerText = "Add to cart";
+
+            
+            
+            
+            div.append(img, product_name, product_price);
+            parent.append(div);
+
+    });
+    }
+    
+}
+showProducts();
+}
+
+
+    // addtocart(e);
+</script>

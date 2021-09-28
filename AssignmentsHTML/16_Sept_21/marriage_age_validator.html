@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Age Validator</title>
+</head>
+<body>
+    <div style="margin-top: 150px; margin-left: 40%;">
+        <div>
+            <label for=""><b>Select Gender</b></label>
+            <select name="" id="selectGender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for=""><b>Enert Your DOB here</b></label>
+            <input type="number" name="" id="year">
+        </div>
+        <br>
+        <div>
+            <button onclick="validate('gender','age')">Validate </button>
+            <button onclick="clr()">Clear</button>
+        </div>
+        <div>
+            <h1 id="h"></h1>
+        </div>
+    </div>
+
+    <script>
+        function validate(gender, age){
+        var genderEle = document.getElementById('selectGender');
+        var gender = genderEle.value;
+        var yearEle = document.getElementById("year");
+        var dob = Number(yearEle.value);
+        var age = 2021 - dob;
+        // console.log(dob, gender)
+
+            if (age > 18 && gender == 'Female'){
+                // alert ("You are valid to get married")
+                document.getElementById("h").innerHTML = "You are valid to get married"
+            }else if (age > 21 && gender == "Male"){
+                // alert ("You are valid to get married")
+                document.getElementById("h").innerHTML = "You are valid to get married"
+            }else{
+                // alert ("You are not valid to get married")
+                document.getElementById("h").innerHTML = "You are not valid to get married"
+            }
+        }
+
+        function clr(){
+            document.getElementById("h").innerHTML = ""
+        }
+    </script>
+</body>
+</html>

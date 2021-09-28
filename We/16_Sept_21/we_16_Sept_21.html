@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Part</title>
+</head>
+<body>
+    <div>
+        <p id="output"></p>
+        <div>
+            <label for="">Age</label>
+            <input type="number" name="" id="age" />
+        </div>
+        <br>
+        <button onclick="checkAge()">Click</button>
+    </div>
+    <div>
+        <h2 id="display"></h2>
+        <div>
+            <button onclick="press('0')">0</button>
+            <button onclick="press('1')">1</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('3')">3</button>
+            <button onclick="press('4')">4</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('6')">6</button>
+            <button onclick="press('7')">7</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+        </div>
+        <br>
+        <div>
+            <button onclick="clearDispaly()">Clear</button>
+        </div>
+    </div>
+    <div>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="ch1()">Change H1</button>
+        <button onclick="ch3()">Change H3</button>
+        <button onclick="ch5()">Change H5</button>
+        <button onclick="cc('green')">Change Green</button>
+        <button onclick="cc('red')">Change Red</button>
+        <button onclick="cc('blue')">Change Blue</button>
+    </div>
+
+    <script>
+        function checkAge(){
+            var ageEle = document.getElementById("age");
+            var age = Number(ageEle.value);
+            // console.log(age)
+            var outEle = document.getElementById("output")
+            if (age > 18){
+                outEle.textContent = "You can drive in India!"
+            }else if (age == 18){
+                outEle.textContent = "You are just old enough to drive in India!"
+            }else{
+                outEle.textContent = 'You can not drive in India!'
+            }
+        }
+
+        var output = '';
+
+        function press(num){
+            output = output + num;
+            document.getElementById('display').textContent = output
+        }
+
+        function clearDispaly(){
+            var output = "";
+            document.getElementById('display').textContent = output;
+        }
+
+        function ch1(){
+                var h1s = document.querySelectorAll('h1');
+                h1s[0].style.color = 'red'
+            }
+
+            function ch3(){
+                var h3s = document.querySelectorAll('h3');
+                for (var i = 0; i < h3s.length; i++){
+                    h3s[i].style.color = 'green';
+                }
+            }
+
+            function ch5(){
+                var h5s = document.querySelectorAll('h5');
+                for (var i = 0; i < h5s.length; i++){
+                    h5s[i].style.color = 'blue'
+                }
+            }
+
+            function cc(className){
+                var items = document.querySelectorAll('.'+className);
+                for (var i = 0; i < items.length; i++){
+                    items[i].style.color = className;
+                }
+            }
+    </script>
+</body>
+</html>

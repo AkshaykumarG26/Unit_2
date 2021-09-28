@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1000px;
+            margin:auto;
+            display: flex;
+            /* border: 1px solid red; */
+            height: 200px;
+        }
+
+        .first{
+            /* border: 1px solid yellow; */
+            width: 300px;
+            margin: auto;
+            height: 150px;
+            display: flex;
+            background-color: aquamarine;
+            border-radius: 20px;
+        }
+
+        img{
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 27px;
+            display: flex;
+            margin-left: 10px;
+        }
+
+        h4, p, .first{
+            display: flex;
+            /* margin-top: 50px; */
+        }
+
+        .other{
+            margin-top: 60px;
+            margin-left: 20px;
+        }
+
+        .color1{
+            background-color: red;
+        }
+
+        .color2{
+            background-color: blue;
+        }
+
+        .color3{
+            background-color: pink;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+
+
+        .container2{
+            display: flex;
+            width: 700px;
+            margin: auto;
+            padding: 20px;
+            /* border: 1px solid black; */
+        }
+
+        .container2 > div{
+            font-size: 25px;
+            padding: 5px;
+            margin-left: 60px;
+            background-color: blue;
+        }
+
+        .container2 > div:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first color1">
+            <div>
+                <img src="download.jpeg" alt="">
+                
+            </div>
+            <div class="details other">
+            <div>Scholership</div>
+               <div> Activate</div>
+            </div>
+        </div>
+        <div class="first color2">
+            <div>
+                <img src="download.jpeg" alt="">
+            </div>
+            <div class="details other">
+                <div>Scholership</div>
+                   <div> Activate</div>
+                </div>
+        </div>
+        <div class="first color3">
+            <div>
+                <img src="download.jpeg" alt="">
+            </div>
+            <div class="details other">
+                <div>Scholership</div>
+                   <div> Activate</div>
+            </div>
+        </div>
+    </div>
+    <h1>Popular Program</h1>
+    <div class="container2">
+        <div>Graduate</div>
+        <div>PostGraduate</div>
+        <div>Ph.D</div>
+        <div>Training</div>
+    </div>
+</body>
+</html>

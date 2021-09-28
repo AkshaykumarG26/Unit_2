@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: rgb(18, 133, 139);
+            border-radius: 8%;
+            width:800px;
+            height:500px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        button{
+            font-size: 20px;
+            width:170px;
+            height:80px;
+            border-radius: 20px;
+            margin-top: 370px;
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="b">
+        <button id="btn">SUBMIT</button>
+    </div>
+</body>
+</html>
+<script>
+    let bt2 =  document.getElementById("btn")
+    function change_back(){
+        bt2.style.backgroundColor = `rgb(${Math.random() * 255},${Math.random()*255},${Math.random()*255})`;
+    }
+    let b1 = document.getElementById("b")
+    b1.addEventListener('mouseover',change_back)
+</script>

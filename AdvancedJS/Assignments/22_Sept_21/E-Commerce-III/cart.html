@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+    #products{
+        margin: 5% 5% 5% 5%;
+        /* height: 600px; */
+        /* border: 1px solid black; */
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        grid-gap: 5%;
+        justify-content: center;
+    }
+
+    div > div {
+      /* border: 1px solid black; */
+      padding: 20PX;
+      /* display: block; */
+    }
+
+    img{
+        width: 80px;
+        height: 150px;
+        /* content: inherit; */
+        margin-left: auto;
+        border-radius: 10px;
+        /* margin-right: auto; */
+    }
+
+    .gotohomebtn{
+      width: 150px;
+      margin-left: 40%;
+      padding: 15px;
+
+    }
+
+    .gotohomebtn:hover{
+      background-color: rgb(109, 63, 63);
+      color: white;
+    }
+
+    div > button{
+      padding: 10px;
+    }
+
+    div > button:hover{
+      background-color: rgb(53, 23, 23);
+      color: white;
+
+    }
+
+    body{
+      background-color: rgb(192, 189, 189);
+      /* border: 3px solid black */
+    }
+
+    p{
+      font-size: 17px;
+      font-family: fantasy;
+    }
+    h3{
+      margin-left: 950px;
+    }
+   
+</style>
+</head>
+<body>
+    <h3 id="totalItems"></h3>
+    <h3 id="totalAmount"></h3>
+    <h1 style="margin-left: 36%;">Welcome to Cart</h1>
+    <a href="products.html"><button class="gotohomebtn">Back to Homepage</button></a>
+    <div id="products"></div>
+</body>
+</html>
+
+<script>
+
+    let parent = document.getElementById("products")
+    let cart = JSON.parse(localStorage.getItem("cartIII"))
+
+    var totalItems = document.getElementById("totalItems");
+    totalItems.textContent = "Total Number of Items in cart  :  " + cart.length;
+    
+    let totalAmount = document.getElementById("totalAmount");
+    let amount = []
+    function showProducts(){
+        cart.forEach(function(product){
+          
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            
+            img.src = product.img
+            
+            let product_name = document.createElement("p");
+            product_name.textContent = product.name;
+            
+            let product_price = document.createElement("p");
+            product_price.textContent = product.price;
+            amount.push(product_price.innerText)
+
+            div.append(img, product_name, product_price);
+            parent.append(div);
+          });
+  }
+
+
+showProducts();
+console.log(amount)
+  let a = amount.reduce(function(ac,el){
+    return +(ac)+(+el)
+  })
+  // console.log(a)
+
+  totalAmount.textContent = "Total Amount : " + a
+
+
+
+
+
+</script>

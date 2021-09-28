@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Double Click</title>
+    </head>
+    <style>
+        h1{
+            color: red;
+            text-align: center;
+            margin-top: 200px;
+        }
+        button{
+            margin-left: 40%;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+<body>
+
+    <h1 id="h1">My color should change when I double click the button!</h1>
+    <br>
+  <button ondblclick="change()">Click here to change my color</button>
+  <script>
+   function change(){
+       document.getElementById("h1").style.color = randomcolors();
+   }
+
+  function randomcolors(){
+      return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+@import 'style.css';
+
+body{
+    background: var(--dark);
+}
+
+
+
+h3{
+    color: var(--primary);
+    padding: 30px 40px;
+    text-transform: uppercase;
+    text-align: center;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.add{
+    color: var(--pure);
+    padding: 3pc;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: right; */
+    /* margin: 20px; */
+    /* margin-right: 800px; */
+}
+
+.add .a .img{
+    /* margin: 10rem; */
+    padding-left: 10rem;
+    
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zig_Zag Grid</title>
+    <style>
+
+        #container1{
+            margin:auto;
+            width: 1024px;
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div > div {
+            background: rgba(6, 80, 55, 0.781);
+            margin: 20px;
+            flex-basis: 25%;
+
+        }
+
+        div>div:nth-child(2), div>div:nth-child(4), div>div:nth-child(9){
+            flex-grow: 1;
+        }
+
+</style>
+
+</head>
+<body>
+    <div id="container1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <style>
+        img{
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Slide Show</h1>
+    <button onclick="stopIntervat()">Stop Slide Show</button>
+    <button onclick="startSlideShow()">Start Slide Show</button>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+    let images = ["https://images.pexels.com/photos/733745/pexels-photo-733745.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "https://images.pexels.com/photos/4536012/pexels-photo-4536012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",]; 
+
+    let container = document.getElementById("container");
+
+    let Interval;
+
+    function startSlideShow(){
+
+        let counter = 0;
+
+       Interval =  setInterval(function(){
+
+            container.innerHTML = null;
+
+            if (counter === images.length){
+                counter = 0 // reset counter
+            }
+
+            let img = document.createElement("img");
+            img.src = images[counter];
+            container.append(img);
+            counter += 1
+        }, 1000)
+    }
+
+    startSlideShow()
+
+    function stopIntervat(){
+        clearInterval(Interval)
+    }
+</script>
